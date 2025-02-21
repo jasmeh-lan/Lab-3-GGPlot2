@@ -15,11 +15,11 @@ Guide), e.g. lab-3-ggplot2.
 
 Your project folder should contain the following:
 
--   `.Rproj`  
--   `lab-3-student.qmd`  
--   `data` folder
-    -   `surveys.csv`  
--   rendered document (`.md`)
+- `.Rproj`  
+- `lab-3-student.qmd`  
+- `data` folder
+  - `surveys.csv`  
+- rendered document (`.md`)
 
 You will submit a link to your GitHub repository with all content.
 
@@ -31,17 +31,17 @@ There is, however, an important balance between copying someone else’s
 code and *using their code to learn*. Therefore, if you use external
 resources, I want to know about it.
 
--   If you used Google, you are expected to “inform” me of any resources
-    you used by **pasting the link to the resource in a code comment
-    next to where you used that resource**.
+- If you used Google, you are expected to “inform” me of any resources
+  you used by **pasting the link to the resource in a code comment next
+  to where you used that resource**.
 
--   If you used ChatGPT, you are expected to “inform” me of the
-    assistance you received by (1) indicating somewhere in the problem
-    that you used ChatGPT (e.g., below the question prompt or as a code
-    comment), and (2) downloading and attaching the `.txt` file
-    containing your **entire** conversation with ChatGPT. ChatGPT can we
-    used as a “search engine”, but you should not copy and paste prompts
-    from the lab or the code into your lab.
+- If you used ChatGPT, you are expected to “inform” me of the assistance
+  you received by (1) indicating somewhere in the problem that you used
+  ChatGPT (e.g., below the question prompt or as a code comment),
+  and (2) downloading and attaching the `.txt` file containing your
+  **entire** conversation with ChatGPT. ChatGPT can we used as a “search
+  engine”, but you should not copy and paste prompts from the lab or the
+  code into your lab.
 
 Additionally, you are permitted and encouraged to work with your peers
 as you complete lab assignments, but **you are expected to do your own
@@ -96,68 +96,21 @@ within plots at the Portal study site. The data are stored as a comma
 separated value (CSV) file. Each row holds information for a single
 animal, and the columns represent:
 
-<table>
-<thead>
-<tr class="header">
-<th>Column</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>record_id</code></td>
-<td>Unique ID for the observation</td>
-</tr>
-<tr class="even">
-<td><code>month</code></td>
-<td>month of observation</td>
-</tr>
-<tr class="odd">
-<td><code>day</code></td>
-<td>day of observation</td>
-</tr>
-<tr class="even">
-<td><code>year</code></td>
-<td>year of observation</td>
-</tr>
-<tr class="odd">
-<td><code>plot_id</code></td>
-<td>ID of a particular plot</td>
-</tr>
-<tr class="even">
-<td><code>species_id</code></td>
-<td>2-letter code</td>
-</tr>
-<tr class="odd">
-<td><code>sex</code></td>
-<td>sex of animal (“M”, “F”)</td>
-</tr>
-<tr class="even">
-<td><code>hindfoot_length</code></td>
-<td>length of the hindfoot in mm</td>
-</tr>
-<tr class="odd">
-<td><code>weight</code></td>
-<td>weight of the animal in grams</td>
-</tr>
-<tr class="even">
-<td><code>genus</code></td>
-<td>genus of animal</td>
-</tr>
-<tr class="odd">
-<td><code>species</code></td>
-<td>species of animal</td>
-</tr>
-<tr class="even">
-<td><code>taxon</code></td>
-<td>e.g. Rodent, Reptile, Bird, Rabbit</td>
-</tr>
-<tr class="odd">
-<td><code>plot_type</code></td>
-<td>type of plot</td>
-</tr>
-</tbody>
-</table>
+| Column            | Description                        |
+|-------------------|------------------------------------|
+| `record_id`       | Unique ID for the observation      |
+| `month`           | month of observation               |
+| `day`             | day of observation                 |
+| `year`            | year of observation                |
+| `plot_id`         | ID of a particular plot            |
+| `species_id`      | 2-letter code                      |
+| `sex`             | sex of animal (“M”, “F”)           |
+| `hindfoot_length` | length of the hindfoot in mm       |
+| `weight`          | weight of the animal in grams      |
+| `genus`           | genus of animal                    |
+| `species`         | species of animal                  |
+| `taxon`           | e.g. Rodent, Reptile, Bird, Rabbit |
+| `plot_type`       | type of plot                       |
 
 ## Reading the Data into `R`
 
@@ -218,7 +171,7 @@ Let’s get started!
 ## Scatterplot
 
 **3. First, let’s create a scatterplot of the relationship between
-`weight` (on the *x*-axis) and `hindfoot_length` (on the *y*-axis).**
+`weight` (on the $x$-axis) and `hindfoot_length` (on the $y$-axis).**
 
 ``` r
 ggplot(data = surveys,
@@ -234,7 +187,7 @@ ggplot(data = surveys,
        title = "Relationship Between An Animal's Weight to their Hindfoot Length")
 ```
 
-![](lab-3-student.markdown_strict_files/figure-markdown_strict/scatterplot-1.png)
+![](lab-3-student_files/figure-commonmark/scatterplot-1.png)
 
 We can see there are **a lot** of points plotted on top of each other.
 Let’s try and modify this plot to extract more information from it.
@@ -259,10 +212,10 @@ friendly labels and a title to your plot.**
 <!-- Continue to modify the plot you originally created for question 3! -->
 
 It takes a larger cognitive load to read text that is rotated. It is
-common practice in many journals and media outlets to move the *y*-axis
+common practice in many journals and media outlets to move the $y$-axis
 label to the top of the graph under the title.
 
-**8. Specify your *y*-axis label to be empty and move the *y*-axis label
+**8. Specify your $y$-axis label to be empty and move the $y$-axis label
 into the subtitle.**
 
 <!-- Continue to modify the plot you originally created for question 3! -->
@@ -283,7 +236,7 @@ ggplot(data = surveys,
         axis.text.y = element_text(angle = 45))
 ```
 
-![](lab-3-student.markdown_strict_files/figure-markdown_strict/boxplot-1.png)
+![](lab-3-student_files/figure-commonmark/boxplot-1.png)
 
 **9. Create side-by-side boxplots to visualize the distribution of
 weight within each species.**
@@ -331,7 +284,7 @@ change in your code!**
 Some small changes can make **big** differences to plots. One of these
 changes are better labels for a plot’s axes and legend.
 
-**14. Modify the *x*-axis and *y*-axis labels to describe what is being
+**14. Modify the $x$-axis and $y$-axis labels to describe what is being
 plotted. Be sure to include any necessary units! You might also be
 getting overlap in the species names – use `theme(axis.text.x = ____)`
 or `theme(axis.text.y = ____)` to turn the species axis labels 45
@@ -363,7 +316,7 @@ ggplot(data = surveys,
         axis.text.y = element_text(angle = 45))
 ```
 
-![](lab-3-student.markdown_strict_files/figure-markdown_strict/rotated-boxplot-1.png)
+![](lab-3-student_files/figure-commonmark/rotated-boxplot-1.png)
 
 Notice how vertically stacked boxplots make the species labels more
 readable than horizontally stacked boxplots (even when the axis labels
@@ -375,9 +328,9 @@ For Lab 3 you will submit the link to your GitHub repository. Your
 rendered file is required to have the following specifications in the
 YAML options (at the top of your document):
 
--   have the plots embedded (`embed-resources: true`)
--   include your source code (`code-tools: true`)
--   include all your code and output (`echo: true`)
+- have the plots embedded (`embed-resources: true`)
+- include your source code (`code-tools: true`)
+- include all your code and output (`echo: true`)
 
 **If any of the options are not included, your Lab 3 or Challenge 3
 assignment will receive an “Incomplete” and you will be required to

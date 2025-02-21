@@ -2,7 +2,7 @@
 title: "Lab 3: Rodent's GGPlot Activity"
 date: today
 author: "Jasmine Lantaca"
-format: html
+format: gfm
 embed-resources: true
 code-tools: true
 echo: true
